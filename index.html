@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AQ</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="lib/leaflet.css">
+</head>
+<body>
+
+	<div id="map"></div>
+
+	<div id="sidebar">
+		<div id="filter">
+			<h2>Filter</h2>
+			<label>
+				Monitoring station:
+				<select></select>
+			</label>
+		</div>
+		<div id="stats">
+			<h2>Statistics</h2>
+			<table>
+				<tr><th>Stat</th><th>Value</th></tr>
+				<tr><th>Mean</th><td id="statmean"></td></tr>
+				<tr><th>High</th><td id="stathigh"></td></tr>
+				<tr><th>Low</th><td id="statlow"></td></tr>
+				<tr><th>Std dev</th><td id="statstddev"></td></tr>
+			</table>
+		</div>
+		<div id="metadata">
+			<h2>Station</h2>
+			<h3>Metadata</h3>
+			<div id="closed">This station is closed</div>
+			<table>
+				<tr><th width="120">Canonical ID</th><td id="mID"></td></tr>
+				<tr><th>Site Name</th><td id="mName"></td></tr>
+				<tr><th>Site Code</th><td id="mCode"></td></tr>
+				<tr><th>EU Site ID</th><td id="mEUID"></td></tr>
+				<tr><th>Publisher</th><td id="mPublisher"></td></tr>
+				<tr><th>Data Processor</th><td id="mProcessor"></td></tr>
+				<tr><th>Data Owner</th><td id="mOwner"></td></tr>
+				<tr><th>Site Operator</th><td id="mOperator"></td></tr>
+				<tr><th>Quality Assurance</th><td id="mQA"></td></tr>
+				<tr><th>URI</th><td id="mURI"></td></tr>
+				<tr><th>Download URL</th><td id="mDownload"></td></tr>
+				<tr><th>Metadata URL</th><td id="mMetadata"></td></tr>
+				<tr><th>Opened</th><td id="mOpened"></td></tr>
+				<tr><th>Closed</th><td id="mClosed"></td></tr>
+				<tr><th>Address</th><td id="mAddress"></td></tr>
+				<tr><th>Latitude</th><td id="mLat"></td></tr>
+				<tr><th>Longitude</th><td id="mLong"></td></tr>
+				<tr><th>Altitude (m)</th><td id="mAltitude"></td></tr>
+				<tr><th>Inlet height (m)</th><td id="mHeight"></td></tr>
+				<tr><th>Environment Type</th><td id="mType"></td></tr>
+				<tr><th>License</th><td id="mLicense"></td></tr>
+				<tr><th>Status</th><td id="mStatus"></td></tr>
+				<tr><th>Measures:</th><td id="mMeasures"></td></tr>
+				<tr><th>Government Region</th><td id="mRegion"></td></tr>
+				<tr><th>Local Authority</th><td id="mLA"></td></tr>
+				<tr><th colspan="2" id="mLineage">Lineage:<br></th></tr>
+			</table>
+		</div>
+	</div>
+
+	<div id="drawer">
+		<div id="chart"></div>
+		<div id="table"></div>
+	</div>
+
+	<script src="/lib/d3.v5.min.js"></script>
+	<script src="/lib/leaflet.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>
